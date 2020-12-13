@@ -1,0 +1,340 @@
+/*  Loruki Website Study
+    Author : Traversy Media - Brad
+	Practiced By : Nnamdi Amadi;
+	Main Color: #047aed
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+	--primary-color: #047aed;
+	--secondary-color: #1c3fa8;
+	--dark-color: #002240;
+	--light-color: #f4f4f4;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	background-color: #FFF;
+	position: relative;
+	color: #333;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+ul li{
+	list-style: none;
+}
+
+img{
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+.container{
+	max-width: 1100px;
+	padding: 10px 40px;
+	margin: 0 auto;
+	overflow: visible;
+}
+
+/* Header */
+header{
+	background-color: var(--primary-color);
+	color: #FFF;
+	height: 70px;
+}
+
+
+
+header nav ul a{
+	padding: 5px 20px;
+	font-size: 17px;
+	color: #FFF;
+	display: inline-block;
+	border: 1px solid var(--primary-color);
+}
+
+header nav ul a:hover{
+	border-bottom: 2px solid #FFF;
+}
+
+header nav{
+	justify-self: end;
+}
+
+/* Showcase */
+.showcase{
+	background-color: var(--primary-color);
+	height: 440px;
+	color: #FFF;
+	position: relative;
+	overflow: visible;
+}
+
+.showcase::after{
+	content: "";
+	position: absolute;
+	height: 100px;
+	background-color: #FFF;
+	bottom: -60px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	transform: skewY(-3deg);
+}
+
+.showcase .grid{
+	grid-template-columns: 3fr 2fr;
+}
+
+.showcase .showcase-text p{
+	max-width: 550px;
+}
+
+.showcase .showcase-form{
+	padding: 30px;
+	position: relative;
+	top: 100px;
+	z-index: 2
+}
+
+.showcase-form .field{
+	margin-bottom: 20px;
+}
+
+.showcase-form input[type="text"], .showcase-form input[type="email"]{
+	width: 100%;
+	padding: 4px 3px;
+	font-size: 17px;
+	border: none;
+	border-bottom: 1px solid #333;
+}
+
+.showcase-form input:focus{
+	outline: none;
+}
+
+/* Stats */
+.stats{
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.stats .grid{
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.stats-text{
+	max-width: 700px;
+	margin: 10px auto 30px;
+}
+
+.stats-item h2{
+	font-size: 30px;
+}
+
+.stats-item p{
+	color: var(--primary-color);
+}
+
+/* Cli  */
+.cli{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.cli p{
+	font-size: 20px;
+}
+
+.cli .grid{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+.cli  .grid > *:first-child{
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 2;
+}
+
+/* cloud */
+.cloud{
+	padding: 30px 0;
+	color: #FFF;
+	background-color: var(--primary-color);
+}
+
+.cloud .grid{
+	grid-template-columns: 3fr 2fr;
+}
+
+/* Languages Styles */
+.languages{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.languages .flex{
+	flex-wrap: wrap;
+}
+
+/* Feat Showcase */
+.feat-showcase{
+	background-color: var(--primary-color);
+	color: #FFF;
+}
+
+.feat-showcase img, .feat-platform img, .doc-showcase img{
+	width: 60%;
+	justify-self: end;
+}
+
+/* Feat Platform */
+.feat-platform{
+	background-color: var(--light-color);
+}
+
+
+/* Feat Portfolio */
+.feat-portfolio .card{
+	padding: 5px 20px;
+}
+
+.feat-portfolio .grid{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.feat-portfolio .card:nth-child(1){
+	grid-column: 1 / span 3;
+}
+
+.feat-portfolio .card:nth-child(2){
+	grid-column: 1 / span 2;
+}
+.feat-portfolio .flex i{
+	margin-right: 20px;
+}
+
+/* Doc Showcase */
+.doc-showcase{
+	background-color: var(--primary-color);
+	color : #FFF;
+}
+
+/* Doc Main */
+.doc-main .grid{
+	grid-template-columns: 2fr 3fr;
+}
+
+.doc-main aside{
+	align-self: flex-start;
+	background-color: var(--light-color);
+}
+
+.doc-main aside nav li{
+	margin-bottom: 2px;
+	border: none;
+	border-bottom: 1px solid #333;
+}
+
+.doc-main .alert i{
+	margin-right: 20px;
+}
+
+.doc-main aside nav li a{
+	padding: 5px;
+	display: block;
+}
+
+.doc-main .alert{
+	padding: ;
+}
+
+/* Footer */
+footer{
+	background-color: var(--dark-color);
+	color: #FFF;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+footer a{
+	color: #FFF;
+	margin-right: 20px;
+}
+
+footer .grid{
+	grid-template-columns: repeat(3, 1fr);	
+}
+/* Responsive Version */
+@media(max-width: 768px){
+	header{
+		height: 110px;
+	}
+	header .grid, .showcase .grid, .stats .grid, .cli .grid,
+	.cloud .grid, .feat-showcase .grid, .feat-platform .grid,
+	.feat-portfolio .grid, .doc-showcase .grid, .doc-main .grid{
+		grid-template-columns: 1fr;
+		gap: 0;
+		text-align: center;
+	}
+
+	.feat-portfolio .card:nth-child(1){
+		grid-column: 1;
+	}
+
+	.feat-portfolio .card:nth-child(2){
+		grid-column: 1;
+	}
+
+	img{
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	header nav{
+		justify-self: center;
+	}
+
+	.showcase .showcase-form{
+		top: 20px;
+		width: 70%;
+		margin: auto;
+	}
+
+	.showcase p{
+		margin: 25px auto;
+	}
+
+	.cli  .grid > *:first-child{
+		grid-column: 1;
+	}
+
+	.stats{
+		padding-top: 200px;
+	}
+
+} 
+
+/* Mobile Phone*/
+@media(max-width: 500px){
+	header nav{
+		background-color: rgba(0, 0, 0, 0.2);
+		border-radius: 3px;
+	}
+}
