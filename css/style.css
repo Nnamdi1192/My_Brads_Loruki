@@ -207,6 +207,10 @@ header nav{
 	justify-self: end;
 }
 
+.highlighted{
+	color: red;
+}
+
 /* Feat Platform */
 .feat-platform{
 	background-color: var(--light-color);
